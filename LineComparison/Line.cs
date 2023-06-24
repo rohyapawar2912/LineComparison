@@ -18,12 +18,9 @@ namespace LineComparison
             this.y2 = y2;
         }
 
-        public bool Equals(Line other)
+        public double CalculateLength()
         {
-            if (other == null)
-                return false;
-
-            return x1 == other.x1 && y1 == other.y1 && x2 == other.x2 && y2 == other.y2;
+            double length = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            return length;
         }
-    }
 }

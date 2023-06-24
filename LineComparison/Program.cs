@@ -10,23 +10,18 @@ namespace LineComparison
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Line Equality Check!");
+            Console.WriteLine("Welcome to Line Calculation!");
 
-            // Create two lines
-            Line line1 = new Line(2, 3, 5, 7);
-            Line line2 = new Line(2, 3, 5, 7);
+            // Create two points
+            double x1 = 2, y1 = 3;
+            double x2 = 5, y2 = 7;
 
-            // Check if the lines are equal
-            bool areEqual = line1.Equals(line2);
+            // Create a line using the two points
+            Line line = new Line(x1, y1, x2, y2);
 
-            if (areEqual)
-            {
-                Console.WriteLine("The lines are equal.");
-            }
-            else
-            {
-                Console.WriteLine("The lines are not equal.");
-            }
+            // Calculate and print the length of the line
+            double length = line.CalculateLength();
+            Console.WriteLine($"Length of the line: {length}");
         }
     }
 }
